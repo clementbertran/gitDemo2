@@ -13,17 +13,20 @@
     <input type="text" name="poids" id="poids"><br><br>
     <label for="taille">Donner votre taille </label>
     <input type="text" name="taille"  id="taille">
-    <button action="calcul(poids.value, taille.value)">Calculer</button>
+    <button onclick="calcul()">Calculer</button>
 
     <h2 id="sortie"></h2>
 
     <script>
-        let poids = document.getElementById("poids");
-        let taille = document.getElementById("taille");
-        let sortie = document.getElementById("sortie");
-        funtion calcul(poids, taille){
-           let imc = poids/(taille*taille);
-           return imc; 
+        
+        
+        function calcul(){
+            let poids = document.getElementById("poids").value;
+            let taille = document.getElementById("taille").value;
+            let sortie = document.getElementById("sortie");
+            let imc = poids/(taille*taille);
+            let res = imc.toFixed(1)
+            sortie.innerHTML=res;
         }
         sortie.innerHTML(imc);
 
