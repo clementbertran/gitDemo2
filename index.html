@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Calculer votre IMC</h1>
+
+    <label for="poids">Donner votre poids </label>
+    <input type="text" name="poids" id="poids"><br><br>
+    <label for="taille">Donner votre taille </label>
+    <input type="text" name="taille"  id="taille">
+    <button action="calcul(poids.value, taille.value)">Calculer</button>
+
+    <h2 id="sortie"></h2>
+
+    <script>
+        let poids = document.getElementById("poids");
+        let taille = document.getElementById("taille");
+        let sortie = document.getElementById("sortie");
+        funtion calcul(poids, taille){
+           let imc = poids/(taille*taille);
+           return imc; 
+        }
+        sortie.innerHTML(imc);
+
+
+    </script>
+
+</body>
+</html>
